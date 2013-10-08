@@ -14,7 +14,7 @@
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
+	transition: 0.8s;
 	transform-style: preserve-3d;
 
 	position: relative;
@@ -31,7 +31,7 @@
 
 /* front pane, placed above back */
 .front {
-	z-index: 3;
+	/*z-index: 3;*/
 }
 
 /* back, initially hidden pane */
@@ -52,7 +52,7 @@
 }
 
 .vertical.flip-container .flipper {
-	transform-origin: 100% 100px; /* half of height */
+	transform-origin: 100% 90px; /* half of height */
 }
 
 .vertical.flip-container:hover .flipper {

@@ -13,11 +13,20 @@
 		</div>
 		<div class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
 			<div class="flipper">
-				<div class="front">
+				<!--eventually, get z-index and location (and origin?) from PHP/RoR/etc-->
+				<div class="front" style="z-index: 2;">
 					<img src="muscles.png">
 				</div>
-				<div class="back">
+				<div class="back" style="z-index: 5;">
 					<img src="muscles_reverse.png">
+				</div>
+			</div>
+			<div class="flipper">
+				<div class="front" style="z-index: 3;">
+					<img src="nerves.png">
+				</div>
+				<div class="back" style="z-index: 4;">
+					<img src="nerves_reversed.png">
 				</div>
 			</div>
 			<div class="bottom">
