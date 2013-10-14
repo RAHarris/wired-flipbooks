@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="flip_demo.css" />
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="flip_demo.css" />
 		
 	</head>
 	<body>
@@ -12,21 +14,21 @@
 		<div style="height: 500px">
 		</div>
 		<div class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
-			<div class="flipper">
-				<!--eventually, get z-index and location (and origin?) from PHP/RoR/etc-->
-				<div class="front" style="z-index: 2;">
-					<img src="muscles.png">
-				</div>
-				<div class="back" style="z-index: 5;">
-					<img src="muscles_reverse.png">
-				</div>
-			</div>
-			<div class="flipper">
-				<div class="front" style="z-index: 3;">
+			<div class="flipper js-level2">
+				<div class="front" style="z-index: 4;">
 					<img src="nerves.png">
 				</div>
-				<div class="back" style="z-index: 4;">
+				<div class="back" style="z-index: 5;">
 					<img src="nerves_reversed.png">
+				</div>
+			</div>
+			<div class="flipper js-level1">
+				<!--eventually, get z-index and location (and origin?) from PHP/RoR/etc-->
+				<div class="front" style="z-index: 3;">
+					<img src="muscles.png">
+				</div>
+				<div class="back" style="z-index: 6;">
+					<img src="muscles_reverse.png">
 				</div>
 			</div>
 			<div class="bottom">
