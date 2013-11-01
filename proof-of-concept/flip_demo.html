@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="flip_demo.css" />
-		
+		<script src="flip_demo.js"></script>
 	</head>
 	<body>
 		<div>
@@ -14,25 +14,40 @@
 		<div style="height: 500px">
 		</div>
 		<div class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
-			<div class="flipper js-level2">
-				<div class="front" style="z-index: 4;">
-					<img src="nerves.png">
+			<div class="flipper" id="level1" style="z-index: 3;">
+				<div class="front" style="background: url(nerves.png) 0 0 no-repeat;">
+					<!--<img src="nerves.png">-->
+					 
 				</div>
-				<div class="back" style="z-index: 5;">
-					<img src="nerves_reversed.png">
+				<div class="back" style="background: url(nerves_reversed.png) 0 0 no-repeat;">
+					<!--<img src="nerves_reversed.png">-->
+					 
 				</div>
 			</div>
-			<div class="flipper js-level1">
+			<div class="flipper" id="level2" style="z-index: 2;">
 				<!--eventually, get z-index and location (and origin?) from PHP/RoR/etc-->
-				<div class="front" style="z-index: 3;">
-					<img src="muscles.png">
+				<div class="front" style="background: url(muscles.png) 0 0 no-repeat;">
+					<!--<img src="muscles.png">-->
+					 
 				</div>
-				<div class="back" style="z-index: 6;">
-					<img src="muscles_reverse.png">
+				<div class="back" style="background: url(muscles_reversed.png) 0 0 no-repeat;">
+					<!--<img src="muscles_reverse.png">-->
+					 
 				</div>
 			</div>
 			<div class="bottom">
 				<img src="skeleton.jpg">
+			</div>
+		</div>
+		<form name="defaultForm" action="#">
+			<input type="radio" name="beExclusive" onclick="flipFlap(1)" label="flap 2">
+			<input type="radio" name="beExclusive" onclick="flipFlap(2)" label="flap 1">
+		</form>
+		<div style="height: 200px"></div>
+		<div>
+			<div class="flipper" id="test1layer1" style="z-index: 2">
+				<div class="front" style="background: url(nerves.png) 0 0 no-repeat;"></div>
+				<div class="back" style
 			</div>
 		</div>
 	</body>
