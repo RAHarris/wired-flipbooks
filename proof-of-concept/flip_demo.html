@@ -45,10 +45,16 @@
 		</form>
 		<div style="height: 200px"></div>
 		<div>
-			<div class="flipper" id="test1layer1" style="z-index: 2">
-				<div class="front" style="background: url(nerves.png) 0 0 no-repeat;"></div>
-				<div class="back" style
+			<div id="test1layer1" style="z-index: 2; position: absolute;">
+				<img src="nerves.png">
+			</div>
+			<div class="bottom" style="z-index: 0; position: absolute;">
+				<img src="skeleton.jpg">
 			</div>
 		</div>
+		<form name="test1form" action="#" style="position: relative; z-index: 4;">
+			<input type="radio" name="test1button" onclick="flipTest1()" label="up">
+			<input type="radio" name="test1button" onclick="flipTest2()" label="down">
+		</form>
 	</body>
 </html>
