@@ -14,6 +14,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
+    
     <body>
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -27,10 +28,10 @@
                     <a class="navbar-brand" href="#">Flipbooks</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#artifacts">artifacts</a></li>
-                        <li><a href="#about">about the project</a></li>
-                        <li><a href="#archives">medical archives</a></li>
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#artifacts" data-toggle="tab">artifacts</a></li>
+                        <li><a href="#about" data-toggle="tab">about the project</a></li>
+                        <li><a href="#archives" data-toggle="tab">medical archives</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,13 +39,35 @@
         
         <div height="1000px"></div>
         
-        <div class="container">
-            <div class="jumbotron">
-                <h1>About the Artifacts</h1>
-                <p>Should probably talk to one of the librarians or do some research.  Ideally a librarian could supply a paragraph or two about the different folios.</p>
-            </div>
-        </div>
-
+        <section class="tab-content">
+            <article class="tab-pane active" id="artifacts">
+                <div class="jumbotron">
+                    <h1>Artifacts Go Here</h1>
+                    <div class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+			<div class="flipper" id="level1" style="z-index: 3; left:250px; top:400px;">
+			    <div class="front" style="background: url(resources/png-book1/stomach_outside.png) 0 0 no-repeat; background-repeat: no-repeat"></div>
+                            <div class="back" style="background: url(resources/png-book1/stomach_outside_reversed.png) 0 0 no-repeat; background-repeat: no-repeat;"></div>
+                        </div>
+                        <div class="bottom">
+			    <img src="resources/png-book1/flapbook_01_01.png">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="tab-pane" id="about">
+                <div class="jumbotron">
+                    <h1>About the Artifacts</h1>
+                    <p>Should probably talk to one of the librarians or do some research.  Ideally a librarian could supply a paragraph or two about the different folios.</p>
+                </div>
+            </article>
+            <article class="tab-pane" id="archives">
+                <div class="jumbotron">
+                    <h1>Archives Page</h1>
+                    <p>I don't actually remember what this page was supposed to be for.  Maybe talking about the Medical Archives and the Wired! Lab?</p>
+                </div>
+            </article>
+        </section>
+        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins and for page switching) -->
         <script src="https://code.jquery.com/jquery.js"></script>
         <!-- flip javascript -->
